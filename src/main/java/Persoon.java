@@ -45,4 +45,13 @@ public class Persoon {
         }
         return s;
     }
+
+    public Game zoekGameOpNaam(String naam) {
+        for (Game g : mijnGames) {
+            if (g.getNaam().equals(naam)) {
+                return g;
+            }
+        }
+        return null; // Niets gevonden
+    }
 }
