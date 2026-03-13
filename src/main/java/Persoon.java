@@ -54,4 +54,14 @@ public class Persoon {
         }
         return null; // Niets gevonden
     }
+
+    public ArrayList<Game> bepaalGamesNietInBezit(ArrayList<Game> teKoop) {
+        ArrayList<Game> resultaat = new ArrayList<>();
+        for (Game g : teKoop) {
+            if (!mijnGames.contains(g)) {
+                resultaat.add(g);
+            }
+        }
+        return resultaat;
+    }
 }
